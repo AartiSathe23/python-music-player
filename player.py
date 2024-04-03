@@ -29,7 +29,7 @@ class Player:
       #   Menu=ImageTk.PhotoImage(file="vinylplayer.jpeg")
       #   Label(self.root,image=Menu).place(x=20,y=20,width=360,height=180,Image.ANTIALIAS)
 
-        Menu_image = Image.open("vinylplayer.jpeg")
+        Menu_image = Image.open("images/vinylplayer.jpeg")
         Menu_image= Menu_image.resize((360, 180), Image.LANCZOS)
         self.Menu = ImageTk.PhotoImage(Menu_image)
         Label(self.root, image=self.Menu).place(x=20, y=20, width=360, height=180)
@@ -63,25 +63,25 @@ class Player:
         clear_button = Button(self.root, text="Clear Playlist",font=("Arial",12,"bold"),bg="gray35",fg="gold",bd=2,relief=RIDGE,width=13, command=self.ClearPlaylist)
         clear_button.place(x=130, y=300)
 
-        play_btn_image = Image.open("play.jpg")
+        play_btn_image = Image.open("images/play.jpg")
         play_btn_image = play_btn_image.resize((50, 50), Image.LANCZOS)
         self.play_btn = ImageTk.PhotoImage(play_btn_image)
         play = Button(lower_frame, image=self.play_btn, bg="white", bd=0, height=50, width=50, command=self.PlayMusic, cursor="hand2")
         play.place(x=130, y=15)
 
-        pause_btn_image=Image.open("pausebtn.png")
+        pause_btn_image=Image.open("images/pausebtn.png")
         pause_btn_image=pause_btn_image.resize((42,42),Image.LANCZOS)
         self.pause_btn=ImageTk.PhotoImage(pause_btn_image)
         pause=Button(lower_frame,image=self.pause_btn,bg="white",bd=0,height=50,width=50,borderwidth=0,command=self.PauseMusic,cursor="hand2")
         pause.place(x=40,y=15)
 
-        resume_btn_image=Image.open("resume.jpg")
+        resume_btn_image=Image.open("images/resume.jpg")
         resume_btn_image=resume_btn_image.resize((70,70),Image.LANCZOS)
         self.resume_btn=ImageTk.PhotoImage(resume_btn_image)
         resume=Button(lower_frame,image=self.resume_btn,bg="white",bd=0,height=50,width=50,borderwidth=0,command=self.ResumeMusic,cursor="hand2")
         resume.place(x=220,y=15)
 
-        next_btn_image=Image.open("next.jpg")
+        next_btn_image=Image.open("images/next.jpg")
         next_btn_image=next_btn_image.resize((40,40),Image.LANCZOS)
         self.next_btn=ImageTk.PhotoImage(next_btn_image)
         next=Button(lower_frame,image=self.next_btn,bg="white",bd=0,height=50,width=50,borderwidth=0,command=self.NextMusic,cursor="hand2")
